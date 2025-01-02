@@ -33,13 +33,7 @@ Requirements
 - NET 9 or higher
 
 1. Clone the repository
-    ```bash
-   git clone https://github.com/RustamIrzaev/KeymapsCards.git
-   ```
 2. Navigate to the project directory
-    ```bash
-   cd KeymapsCards
-   ```
 3. Run the application
     ```bash
    dotnet run
