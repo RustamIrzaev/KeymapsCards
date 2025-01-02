@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:KeymapsCards.Converters"
+             xmlns:controls="clr-namespace:KeymapsCards.Views.Controls"
+             x:Class="KeymapsCards.Views.Controls.TimeLeftProgress">
+    
+    <UserControl.Resources>
+        <converters:IntValueToColorConverter x:Key="ValueToColorConverter" />
+    </UserControl.Resources>
+    
+    <ProgressBar Minimum="0" 
+                 Maximum="{Binding MaximumTimeLimit, RelativeSource={RelativeSource AncestorType=controls:TimeLeftProgress}}" 
+                 Value="{Binding TimeLeft, RelativeSource={RelativeSource AncestorType=controls:TimeLeftProgress}}"
+                 ShowProgressText="False">
+        <ProgressBar.Foreground>
+            <MultiBinding Converter="{StaticResource ValueToColorConverter}">
+                <Binding Path="TimeLeft" RelativeSource="{RelativeSource AncestorType=controls:TimeLeftProgress}" />
+                <Binding Path="MaximumTimeLimit" RelativeSource="{RelativeSource AncestorType=controls:TimeLeftProgress}"/>
+            </MultiBinding>
+        </ProgressBar.Foreground>
+    </ProgressBar>
+    
+</UserControl>

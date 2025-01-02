@@ -1,0 +1,684 @@
+{
+  "software": "Rider",
+  "keyboard_scheme": "ReSharper (macOS)",
+  "description": "Rider keymaps for Resharper (macOS)",
+  "id": "897BB07C-FEEE-401F-8D82-4007E6ADCA41",
+  "file_version": "1.0.0",
+  "author": "RustInCode",
+  "repo": "",
+  "link_to_keymaps": "https://resources.jetbrains.com/storage/products/rider/docs/Rider_ReSharper_mac_shortcuts.pdf",
+  "keymaps": [
+    {
+      "section": "Create and Edit",
+      "commands": [
+        {
+          "command": "Show Context Actions",
+          "keymap": "<Option>+<Enter>"
+        },
+        {
+          "command": "Basic Code Completion",
+          "keymap": "<Control>+<Space>"
+        },
+        {
+          "command": "Smart Code Completion",
+          "keymap": "<Control>+<Shift>+<Space>"
+        },
+        {
+          "command": "Type Name Completion",
+          "keymap": "<Control>+<Option>+<Space>"
+        },
+        {
+          "command": "Complete Statement",
+          "keymap": "<Command>+<Shift>+<Enter>"
+        },
+        {
+          "command": "Parameter Information",
+          "keymap": "<Command>+P"
+        },
+        {
+          "command": "Quick Definition",
+          "keymap": "<Option>+<Space>"
+        },
+        {
+          "command": "Quick Documentation",
+          "keymap": "<Control>+Q"
+        },
+        {
+          "command": "External Documentation",
+          "keymap": "<Shift>+<F1>"
+        },
+        {
+          "command": "Generate...",
+          "keymap": "<Control>+<Command>+N"
+        },
+        {
+          "command": "Override/Implement Members",
+          "keymap": "<Control>+I"
+        },
+        {
+          "command": "Surround With...",
+          "keymap": "<Option>+<Command>+T"
+        },
+        {
+          "command": "Unwrap/Remove...",
+          "keymap": "<Shift>+<Command>+<Delete>"
+        },
+        {
+          "command": "Comment with Line Comment...",
+          "keymap": "<Command>+/"
+        },
+        {
+          "command": "Comment with Block Comment...",
+          "keymap": "<Control>+<Command>+/"
+        },
+        {
+          "command": "Extend Selection",
+          "keymap": "<Option>+<Up>"
+        },
+        {
+          "command": "Shrink Selection",
+          "keymap": "<Option>+<Down>"
+        },
+        {
+          "command": "Context Info",
+          "keymap": "<Control>+<Shift>+Q"
+        },
+        {
+          "command": "Optimize Imports",
+          "keymap": "<Control>+<Option>+O"
+        },
+        {
+          "command": "Auto-Indent Lines",
+          "keymap": "<Control>+<Option>+I"
+        },
+        {
+          "command": "Copy Document Path",
+          "keymap": "<Shift>+<Command>+C"
+        },
+        {
+          "command": "Paste from Clipboard History",
+          "keymap": "<Shift>+<Command>+V"
+        },
+        {
+          "command": "Duplicate Current Line or Selection",
+          "keymap": "<Command>+D"
+        },
+        {
+          "command": "Move Statement Up",
+          "keymap": "<Control>+<Option>+<Shift>+<Up>"
+        },
+        {
+          "command": "Move Statement Down",
+          "keymap": "<Control>+<Option>+<Shift>+<Down>"
+        },
+        {
+          "command": "Move Element Right",
+          "keymap": "<Option>+<Shift>+<Command>+<Right>"
+        },
+        {
+          "command": "Move Element Left",
+          "keymap": "<Option>+<Shift>+<Command>+<Left>"
+        },
+        {
+          "command": "Delete Line at Caret",
+          "keymap": "<Shift>+<Command>+L"
+        },
+        {
+          "command": "Join/Split Line",
+          "keymap": "<Control>+<Shift>+J"
+        },
+        {
+          "command": "New Line Above",
+          "keymap": "<Command>+<Enter>"
+        },
+        {
+          "command": "New Line Below",
+          "keymap": "<Shift>+<Enter>"
+        },
+        {
+          "command": "Toggle Case",
+          "keymap": "<Shift>+<Command>+U"
+        },
+        {
+          "command": "Expand Code Block",
+          "keymap": "<Control>+M E"
+        },
+        {
+          "command": "Collapse Code Block",
+          "keymap": "<Control>+M S"
+        },
+        {
+          "command": "Toggle Folding",
+          "keymap": "<Control>+M M"
+        }
+      ]
+    },
+    {
+      "section": "Analyze and Explore",
+      "commands": [
+        {
+          "command": "Problems Tool Window",
+          "keymap": "<Command>+6"
+        },
+        {
+          "command": "Show Error Description",
+          "keymap": "<Command>+<F1>"
+        },
+        {
+          "command": "Next Highlighted Error",
+          "keymap": "<Option>+<Down>",
+          "disabled": true
+        },
+        {
+          "command": "Previous Highlighted Error",
+          "keymap": "<Shift>+<F12>"
+        },
+        {
+          "command": "Next Error in Solution",
+          "keymap": "<Option>+<F12>"
+        },
+        {
+          "command": "Next Error in Solution",
+          "keymap": "<Option>+<Shift>+<F12>"
+        },
+        {
+          "command": "Toggle Code Inspection in File",
+          "keymap": "<Option>+<Shift>+<Command>+8"
+        },
+        {
+          "command": "Run Inspection by Name...",
+          "keymap": "<Option>+<Shift>+<Command>+I"
+        },
+        {
+          "command": "Inspect This...",
+          "keymap": "<Option>+<Shift>+<Command>+A"
+        },
+        {
+          "command": "Type Hierarchy",
+          "keymap": "<Option>+<Command>+H"
+        }
+      ]
+    },
+    {
+      "section": "Version Control",
+      "commands": [
+        {
+          "command": "VCS Operations",
+          "keymap": "<Control>+V"
+        },
+        {
+          "command": "Commit...",
+          "keymap": "<Command>+K"
+        },
+        {
+          "command": "Update Project",
+          "keymap": "<Option>+<Command>+W"
+        },
+        {
+          "command": "Rollback...",
+          "keymap": "<Option>+<Command>+Z"
+        },
+        {
+          "command": "Push...",
+          "keymap": "<Shift>+<Command>+K"
+        }
+      ]
+    },
+    {
+      "section": "Master Your IDE",
+      "commands": [
+        {
+          "command": "Find Action...",
+          "keymap": "<Shift>+<Command>+A"
+        },
+        {
+          "command": "Open Solution or Project",
+          "keymap": "<Control>+<Shift>+O"
+        },
+        {
+          "command": "Open File or Folder",
+          "keymap": "<Command>+O"
+        },
+        {
+          "command": "Project/Explorer Tool Window",
+          "keymap": "<Command>+1"
+        },
+        {
+          "command": "Reload All from Disk",
+          "keymap": "<Option>+<Command>+Y"
+        },
+        {
+          "command": "Toggle Full Screen mode",
+          "keymap": "<Option>+<Shift>+<Enter>"
+        },
+        {
+          "command": "Preferences",
+          "keymap": "<Command>+,"
+        },
+        {
+          "command": "Jump to Source",
+          "keymap": "<Command>+<Down>"
+        },
+        {
+          "command": "Jump to Last Tool Window",
+          "keymap": "<Option>+<Shift>+<F6>"
+        },
+        {
+          "command": "Hide All Tool Windows",
+          "keymap": "<Shift>+<Command>+<F12>"
+        },
+        {
+          "command": "Go to Next Editor Tab",
+          "keymap": "<Shift>+<Command>+]"
+        },
+        {
+          "command": "Go to Previous Editor Tab",
+          "keymap": "<Shift>+<Command>+["
+        },
+        {
+          "command": "Close Active Editor Tab",
+          "keymap": "<Command>+<F4>"
+        }
+      ]
+    },
+    {
+      "section": "Find Everything",
+      "commands": [
+        {
+          "command": "Search Everywhere",
+          "keymap": "<Shift><Shift>"
+        },
+        {
+          "command": "Find in File",
+          "keymap": "<Command>+F"
+        },
+        {
+          "command": "Replace in File",
+          "keymap": "<Control>+H"
+        },
+        {
+          "command": "Find in Project",
+          "keymap": "<Shift>+<Command>+F"
+        },
+        {
+          "command": "Replace in Project",
+          "keymap": "<Shift>+<Command>+H"
+        },
+        {
+          "command": "Go to File Member",
+          "keymap": "<Command>+<F12>"
+        },
+        {
+          "command": "Go to File",
+          "keymap": "<Shift>+<Command>+N"
+        },
+        {
+          "command": "Go to Symbol",
+          "keymap": "<Option>+<Shift><Command>+N"
+        },
+        {
+          "command": "Go to Text",
+          "keymap": "<Option>+<Shift>+<Command>+E"
+        }
+      ]
+    },
+    {
+      "section": "Navigate From Symbols",
+      "commands": [
+        {
+          "command": "Navigate To...",
+          "keymap": "<Shift>+<Command>+G"
+        },
+        {
+          "command": "Go to Declaration or Usages",
+          "keymap": "<Command>+B"
+        },
+        {
+          "command": "Go to Type Declaration",
+          "keymap": "<Shift>+<Command>+T"
+        },
+        {
+          "command": "Go to Base Symbols",
+          "keymap": "<Command>+U"
+        },
+        {
+          "command": "Go to Derived Symbols",
+          "keymap": "<Option>+<Command>+B"
+        },
+        {
+          "command": "Find Usages",
+          "keymap": "<Option>+<F7>"
+        },
+        {
+          "command": "Highlight Usages in File",
+          "keymap": "<Shift>+<Command>+<F7>"
+        },
+        {
+          "command": "Show Usages",
+          "keymap": "<Option>+<Command>+<F7>"
+        }
+      ]
+    },
+    {
+      "section": "Navigate Context",
+      "commands": [
+        {
+          "command": "Select In...",
+          "keymap": "<Option>+<F1>"
+        },
+        {
+          "command": "Switcher",
+          "keymap": "<Control>+<Tab>"
+        },
+        {
+          "command": "Locale/Select in Solution View",
+          "keymap": "<Option>+<Shift>+L"
+        },
+        {
+          "command": "Recently Viewed Files",
+          "keymap": "<Command>+E"
+        },
+        {
+          "command": "Recently Changed Files",
+          "keymap": "<Option>+<Shift>+<Command>+<Delete>"
+        },
+        {
+          "command": "Last Edit Location",
+          "keymap": "<Shift>+<Command>+<Delete>"
+        },
+        {
+          "command": "Navigate Back",
+          "keymap": "<Command>+-"
+        },
+        {
+          "command": "Navigate Forward",
+          "keymap": "<Shift><Command>+-"
+        },
+        {
+          "command": "Next method",
+          "keymap": "<Control>+<Shift>+<Down>"
+        },
+        {
+          "command": "Previous method",
+          "keymap": "<Control>+<Shift>+<Up>"
+        },
+        {
+          "command": "Go to Line:Column...",
+          "keymap": "<Command>+G"
+        },
+        {
+          "command": "Go to Code Block End",
+          "keymap": "<Option>+<Command>+]"
+        },
+        {
+          "command": "Go to Code Block Start",
+          "keymap": "<Option>+<Command>+["
+        },
+        {
+          "command": "Next Occurrence",
+          "keymap": "<F3>"
+        },
+        {
+          "command": "Previous Occurrence",
+          "keymap": "<Shift>+<F3>"
+        },
+        {
+          "command": "Next Word at Caret",
+          "keymap": "<Command>+<F3>"
+        },
+        {
+          "command": "Previous Word at Caret",
+          "keymap": "<Shift>+<Command>+<F3>"
+        },
+        {
+          "command": "Toggle Bookmark with Mnemonic",
+          "keymap": "<Option>+<F3>"
+        },
+        {
+          "command": "Go to Numbered Bookmark",
+          "keymap": "<Control>+[0-9]"
+        },
+        {
+          "command": "Show Bookmarks...",
+          "keymap": "<Control>+`"
+        },
+        {
+          "command": "Find Tool Window",
+          "keymap": "<Command>+3"
+        },
+        {
+          "command": "Bookmarks Tool Window",
+          "keymap": "<Command>+2"
+        }
+      ]
+    },
+    {
+      "section": "Build, Run, and Debug",
+      "commands": [
+        {
+          "command": "NuGet Quick List",
+          "keymap": "<Option>+<Shift>+N"
+        },
+        {
+          "command": "Build",
+          "keymap": "<Shift>+<Command>+B"
+        },
+        {
+          "command": "Build Current Project",
+          "keymap": "<Shift>+<Command>+<F7>"
+        },
+        {
+          "command": "Cancel Build",
+          "keymap": "<Command>+F9"
+        },
+        {
+          "command": "Run Anything",
+          "keymap": "<Shift><Shift>"
+        },
+        {
+          "command": "Run context configuration",
+          "keymap": "<Control>+<Option>+<F5>"
+        },
+        {
+          "command": "Run Selected Configuration",
+          "keymap": "<Option>+<Shift>+<Command>+R"
+        },
+        {
+          "command": "Debug Selected Configuration",
+          "keymap": "<Control>+<Option>+D"
+        },
+        {
+          "command": "Run Current Configuration",
+          "keymap": "<Control>+<F5>"
+        },
+        {
+          "command": "Debug Current Configuration",
+          "keymap": "<Option>+<F5>"
+        },
+        {
+          "command": "Step Over",
+          "keymap": "<F10>"
+        },
+        {
+          "command": "Step Into",
+          "keymap": "<Command>+<F11>"
+        },
+        {
+          "command": "Smart Step Into",
+          "keymap": "<Shift>+<F7>"
+        },
+        {
+          "command": "Step Out",
+          "keymap": "<Shift>+<F11>"
+        },
+        {
+          "command": "Run to Cursor",
+          "keymap": "<Command>+<F10>"
+        },
+        {
+          "command": "Force Run to Cursor",
+          "keymap": "<Option>+<Command>+<F9>"
+        },
+        {
+          "command": "Show Execution Point",
+          "keymap": "",
+          "disabled": true
+        },
+        {
+          "command": "Evaluate Expression...",
+          "keymap": "<Shift>+<F9>"
+        },
+        {
+          "command": "Stop",
+          "keymap": "<Shift>+<F5>"
+        },
+        {
+          "command": "Resume Program",
+          "keymap": "<F5>"
+        },
+        {
+          "command": "Toggle Line Breakpoint",
+          "keymap": "<F9>"
+        },
+        {
+          "command": "Toggle Temporary Line Breakpoint",
+          "keymap": "<Option>+<Shift>+<Command>+<F8>"
+        },
+        {
+          "command": "Enable/Disable Breakpoint",
+          "keymap": "<Command>+<F9>"
+        },
+        {
+          "command": "Edit Breakpoint",
+          "keymap": "<Option>+<F9>"
+        },
+        {
+          "command": "View Breakpoints...",
+          "keymap": "<Shift>+<Command>+<F8>"
+        },
+        {
+          "command": "Run Tool Window",
+          "keymap": "<Command>+4"
+        },
+        {
+          "command": "Debug Tool Window",
+          "keymap": "<Command>+5"
+        }
+      ]
+    },
+    {
+      "section": "Unit Tests",
+      "commands": [
+        {
+          "command": "Unit Testing Quick List...",
+          "keymap": "<Option>+<Shift>+U"
+        },
+        {
+          "command": "Run Unit Tests",
+          "keymap": "<Command>+T R"
+        },
+        {
+          "command": "Debug Unit Tests",
+          "keymap": "<Command>+T D"
+        },
+        {
+          "command": "Stop Execution",
+          "keymap": "<Command>+T S"
+        },
+        {
+          "command": "Repeat Previous Run",
+          "keymap": "<Command>+T T"
+        },
+        {
+          "command": "Rerun Failed Tests",
+          "keymap": "<Command>+T F"
+        },
+        {
+          "command": "Run All Tests from Solution",
+          "keymap": "<Command>+T L"
+        },
+        {
+          "command": "Create New Session",
+          "keymap": "<Command>+T N"
+        },
+        {
+          "command": "Append Tests to Session",
+          "keymap": "<Command>+T A"
+        },
+        {
+          "command": "Run Current Session",
+          "keymap": "<Command>+T Y"
+        },
+        {
+          "command": "Show Coverage Data...",
+          "keymap": "<Option>+<Command>+<F6>"
+        },
+        {
+          "command": "Unit Tests Tool Window",
+          "keymap": "<Command>+8"
+        }
+      ]
+    },
+    {
+      "section": "Refactor and Clean Up",
+      "commands": [
+        {
+          "command": "Refactor This...",
+          "keymap": "<Shift>+<Command>+R"
+        },
+        {
+          "command": "Move...",
+          "keymap": "<F6>"
+        },
+        {
+          "command": "Safe Delete...",
+          "keymap": "<Option>+<Delete>"
+        },
+        {
+          "command": "Rename...",
+          "keymap": "<F2>"
+        },
+        {
+          "command": "Change Signature...",
+          "keymap": "<Command>+<F6>"
+        },
+        {
+          "command": "Inline...",
+          "keymap": "<Option>+<Command>+N"
+        },
+        {
+          "command": "Extract Method",
+          "keymap": "<Option>+<Command>+M"
+        },
+        {
+          "command": "Introduce Variable",
+          "keymap": "<Option>+<Command>+V"
+        },
+        {
+          "command": "Introduce Field",
+          "keymap": "<Option>+<Command>+D"
+        },
+        {
+          "command": "Introduce Constant",
+          "keymap": "<Option>+<Command>+C"
+        },
+        {
+          "command": "Introduce Parameter",
+          "keymap": "<Option>+<Command>+P"
+        },
+        {
+          "command": "Reformat Code",
+          "keymap": "<Option>+<Command>+L"
+        },
+        {
+          "command": "Code Cleanup",
+          "keymap": "<Option>+<Command>+F"
+        },
+        {
+          "command": "Code Silent Cleanup",
+          "keymap": "<Option>+<Shift>+<Command>+F"
+        }
+      ]
+    }
+  ]
+}

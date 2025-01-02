@@ -1,0 +1,93 @@
+{
+  "$id": "https://github.com/RustamIrzaev/KeymapsCards/blob/main/keymap-schema.json",
+  "title": "Keymap",
+  "description": "Keymaps for a specific keyboard layout",
+  "type": "object",
+  "properties": {
+    "software": {
+      "type": "string",
+      "description": "The software that the keymap is for"
+    },
+    "keyboard_scheme": {
+      "type": "string",
+      "description": "The keyboard layout that the keymap is for"
+    },
+    "description": {
+      "type": "string",
+      "description": "A description"
+    },
+    "id": {
+      "type": "string",
+      "description": "A unique identifier (GUID) for the keymap"
+    },
+    "file_version": {
+      "type": "string",
+      "description": "The version of the file"
+    },
+    "author": {
+      "type": "string",
+      "description": "The author of the keymap file"
+    },
+    "repo": {
+      "type": "string",
+      "description": "The URL of the repository where the keymap is stored"
+    },
+    "link_to_keymaps": {
+      "type": "string",
+      "description": "The URL of the resource from where the keymap was taken"
+    },
+    "disabled": {
+      "type": "boolean",
+      "description": "Whether the keymap is disabled"
+    },
+    "keymaps": {
+      "type": "array",
+      "description": "The keymaps",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "string",
+            "description": "The section of the keyboard"
+          },
+          "commands": {
+            "type": "array",
+            "description": "The commands",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "command": {
+                "type": "string",
+                "description": "The command (the description of the action)"
+              },
+              "keymap": {
+                "type": "string",
+                "description": "The keymap (the key combination)"
+              },
+              "required": [
+                "command",
+                "keymap"
+              ]
+            }
+          }
+        },
+        "required": [
+          "section",
+          "commands"
+        ]
+      }
+    }
+  },
+  "required": [
+    "software", 
+    "keyboard_scheme", 
+    "id", 
+    "file_version",
+    "author",
+    "repo",
+    "keymaps"
+  ]
+}

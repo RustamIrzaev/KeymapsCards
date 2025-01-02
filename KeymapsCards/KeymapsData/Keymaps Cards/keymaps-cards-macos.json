@@ -1,0 +1,21 @@
+{
+  "software": "Keymap Cards",
+  "keyboard_scheme": "Mac OS",
+  "description": "Keymap Cards for Mac OS",
+  "id": "C2AAC9F5-957D-40F0-A692-D938C9FC5737",
+  "file_version": "1.0.0",
+  "author": "RustInCode",
+  "repo": "",
+  "link_to_keymaps": "",
+  "keymaps": [
+    {
+      "section": "General",
+      "commands": [
+        {
+          "command": "Quit",
+          "keymap": "<Command>+Q"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:KeymapsCards.Converters"
+             xmlns:vm="clr-namespace:KeymapsCards.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="KeymapsCards.Views.GameOverView"
+             x:DataType="vm:GameOverViewModel">
+    
+    <Design.DataContext>
+        <vm:GameOverViewModel/>
+    </Design.DataContext>
+    
+    <UserControl.Resources>
+        <converters:BoolToColorConverter x:Key="KnownToColorConverter"/>
+        <converters:BoolToIconConverter x:Key="KnownToIconConverter"/>
+    </UserControl.Resources>
+    
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+        <TextBlock Text="Game Finished" 
+                   FontSize="18" 
+                   FontWeight="Bold"
+                   TextAlignment="Center"/>
+        <TextBlock Text="{Binding StatisticsMessage}" 
+                   FontSize="16" 
+                   TextAlignment="Center"/>
+        
+        <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Disabled">
+            <ListBox ItemsSource="{Binding UserResponses}" 
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Classes="theme-scroll-overlay"
+                     Height="200"
+                     Width="400">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="5" Margin="5">
+                            <TextBlock FontSize="16" Foreground="{Binding IsKnown, Converter={StaticResource KnownToColorConverter}}">
+                                <Run Text="{Binding IsKnown, Converter={StaticResource KnownToIconConverter}}" />
+                            </TextBlock>
+                            
+                            <TextBlock Text="{Binding Command}" 
+                                       FontSize="14"/>
+                            
+                            <TextBlock Text="{Binding Keymap}" 
+                                       FontSize="14"
+                                       FontWeight="Bold"
+                                       Foreground="Gray"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        
+        <Button Content="Start new" 
+                Width="100" 
+                Classes="theme-soft"
+                Command="{Binding StartNewGame}"
+                HorizontalContentAlignment="Center"
+                HorizontalAlignment="Center"/>
+    </StackPanel>
+</UserControl>

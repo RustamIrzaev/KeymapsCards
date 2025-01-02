@@ -1,0 +1,53 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+        xmlns:vm="clr-namespace:KeymapsCards.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        Width="550" Height="380"
+        MinWidth="550" MinHeight="380"
+        x:Class="KeymapsCards.Views.MainWindow"
+        Title="{Binding Title}"
+        ExtendClientAreaToDecorationsHint="True"
+        TransparencyLevelHint="Mica"
+        x:DataType="vm:MainViewModel">
+    
+    <Design.DataContext>
+        <vm:MainViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel>
+        <!-- <NativeMenuBar DockPanel.Dock="Top"/> -->
+        <Grid DockPanel.Dock="Top" ColumnDefinitions="*,Auto">
+            <TextBlock 
+                Text="{Binding Title}"
+                TextAlignment="Center"
+                FontSize="14"
+                Foreground="Gray"
+                FontWeight="Light"
+                Focusable="False"
+                IsHitTestVisible="False"
+                Margin="0,5,0,0"/>
+            
+            <actipro:ToggleThemeButton 
+                Grid.Column="1" 
+                Width="24" 
+                Height="24"
+                Classes="theme-subtle"
+                Margin="{OnPlatform '0,0,0,0', Windows='0,3,140,0'}" />
+        </Grid>
+        
+        <ContentControl Content="{Binding CurrentViewModel}" />
+    </DockPanel>
+    
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="View">
+                <NativeMenu>
+                    <NativeMenuItem Header="Always on Top" Command="{Binding ToggleAlwaysOnTop}" ToggleType="CheckBox" IsChecked="{Binding AlwaysOnTop}" />
+                </NativeMenu>
+            </NativeMenuItem>
+        </NativeMenu>
+    </NativeMenu.Menu>
+</Window>

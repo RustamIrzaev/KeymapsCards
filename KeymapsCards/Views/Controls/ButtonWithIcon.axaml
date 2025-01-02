@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:KeymapsCards.Views.Controls"
+             x:Class="KeymapsCards.Views.Controls.ButtonWithIcon">
+    
+    <Button HorizontalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Classes="theme-soft"
+            Width="{Binding Width, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Height="{Binding Height, RelativeSource={RelativeSource AncestorType=UserControl}}"
+            Command="{Binding Command, RelativeSource={RelativeSource AncestorType=controls:ButtonWithIcon}}" >
+        <StackPanel Orientation="Horizontal" Spacing="5">
+            <PathIcon Data="{Binding Icon, RelativeSource={RelativeSource AncestorType=controls:ButtonWithIcon}}"/>
+            <TextBlock 
+                VerticalAlignment="Center"
+                IsVisible="{Binding !!Text, RelativeSource={RelativeSource AncestorType=controls:ButtonWithIcon}}"
+                Text="{Binding Text, RelativeSource={RelativeSource AncestorType=controls:ButtonWithIcon}}"/>
+        </StackPanel>
+    </Button>
+    
+</UserControl>

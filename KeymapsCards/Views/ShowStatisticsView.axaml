@@ -1,0 +1,76 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:KeymapsCards.Converters"
+             xmlns:vm="clr-namespace:KeymapsCards.ViewModels"
+             mc:Ignorable="d" 
+             x:Class="KeymapsCards.Views.ShowStatisticsView"
+             x:DataType="vm:ShowStatisticsViewModel">
+    
+    <Design.DataContext>
+        <vm:ShowStatisticsViewModel/>
+    </Design.DataContext>
+    
+    <UserControl.Resources>
+        <converters:EnumDescriptionConverter x:Key="EnumDescriptionConverter" />
+    </UserControl.Resources>
+    
+    <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid DockPanel.Dock="Bottom" ColumnDefinitions="*,Auto" Margin="0,0,0,15">
+            <Button Content="Back" 
+                    Width="100" 
+                    Classes="theme-soft"
+                    Command="{Binding GoBack}"
+                    HorizontalContentAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button HorizontalAlignment="Right"
+                        Classes="theme-outline success" 
+                        Command="{Binding CancelClearStatistics}"
+                        IsVisible="{Binding IsClearStatisticsRequested}"
+                        Margin="0,0,5,0">
+                    <PathIcon Data="{StaticResource DismissCircleRegularIcon}"
+                              HorizontalAlignment="Center" />
+                </Button>
+                
+                <Button HorizontalAlignment="Right"
+                        Classes="theme-outline danger"
+                        Command="{Binding ClearStatistics}"
+                        IsVisible="{Binding !!StatisticsData.Count}"
+                        Margin="0,0,10,0">
+                    <PathIcon Data="{StaticResource DeleteRegularIcon}"
+                              HorizontalAlignment="Center" />
+                </Button>
+            </StackPanel>
+        </Grid>
+        
+        <DataGrid DockPanel.Dock="Top"
+                  Margin="20" 
+                  ItemsSource="{Binding StatisticsData}" 
+                  CanUserReorderColumns="True"
+                  CanUserSortColumns="True"
+                  AutoGenerateColumns="False" 
+                  CanUserResizeColumns="True"
+                  IsReadOnly="True" 
+                  GridLinesVisibility="All"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  Classes="theme-scroll-overlay"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto"
+                  BorderThickness="1" 
+                  BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mode" Binding="{Binding GameMode, Converter={StaticResource EnumDescriptionConverter}}" />
+                <DataGridCheckBoxColumn Header="Timed?" Binding="{Binding IsTimedGameMode}"/>
+                <DataGridTextColumn Header="Software" Binding="{Binding Software}"/>
+                <DataGridTextColumn Header="Schema" Binding="{Binding KeyboardScheme}"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding Duration}"/>
+                <DataGridTextColumn Header="Correct/Total" Binding="{Binding CorrectAnswers}"/>
+                <DataGridCheckBoxColumn Header="100% Completion" Binding="{Binding IsFullyAnswered}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

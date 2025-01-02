@@ -1,0 +1,80 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:KeymapsCards.ViewModels.Game"
+        xmlns:controls="clr-namespace:KeymapsCards.Views.Controls"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="300"
+        x:Class="KeymapsCards.Views.Game.ClassicGameView"
+        x:DataType="vm:ClassicGameViewModel">
+    
+    <Design.DataContext>
+        <vm:ClassicGameViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel>
+        <controls:TimeLeftProgress 
+            DockPanel.Dock="Top"
+            Margin="10,10,10,0"
+            Height="2"
+            IsVisible="{Binding IsTimedGameMode}"
+            MaximumTimeLimit="{Binding MaximumTimeLimit}"
+            TimeLeft="{Binding TimeLeft}"/>
+        
+        <controls:CurrentStep 
+            DockPanel.Dock="Top" 
+            Command="{Binding AbortGame}"
+            Message="{Binding CurrentStepMessage}"/>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+            <TextBlock Text="{Binding CurrentCard.Section}" 
+                       FontSize="14"
+                       FontWeight="Thin"
+                       Margin="0,0,0,10"
+                       TextAlignment="Center"/>
+            <TextBlock Text="{Binding CurrentCard.Command}" 
+                       FontSize="20"
+                       FontWeight="Bold"
+                       TextAlignment="Center"/>
+            <TextBlock Text="???" 
+                       FontSize="24" 
+                       FontWeight="Normal"
+                       TextAlignment="Center" 
+                       Margin="0,15,0,10"
+                       IsVisible="{Binding !ShowKeymap}"/>
+            <TextBlock Text="{Binding CurrentCard.Keymap}" 
+                       FontSize="24" 
+                       FontWeight="Bold"
+                       TextAlignment="Center" 
+                       Margin="0,15,0,10"
+                       IsVisible="{Binding !!ShowKeymap}"/>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                        Spacing="10" 
+                        Margin="0,10,0,0">
+                <Button Content="do not know" 
+                        Command="{Binding MarkAsUnknown}" 
+                        IsVisible="{Binding !ShowKeymap}"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        Width="100"
+                        Classes="danger theme-solid" />
+                <Button Content="know" 
+                        Command="{Binding MarkAsKnown}" 
+                        IsVisible="{Binding !ShowKeymap}"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        Width="100"
+                        Classes="success theme-solid" />
+            </StackPanel>
+            
+            <Button Content="{Binding NextButtonText}" 
+                    Command="{Binding NextCard}"
+                    IsVisible="{Binding ShowKeymap}"
+                    Width="96"
+                    Classes="theme-soft"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center" />
+        </StackPanel>
+    </DockPanel>
+</UserControl>

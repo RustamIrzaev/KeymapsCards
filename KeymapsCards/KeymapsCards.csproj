@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <IsPackable>false</IsPackable>
+        <Company>RustInCode</Company>
+        <FileVersion>0.2.8</FileVersion>
+        <AssemblyVersion>0.2.8</AssemblyVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AvaloniaResource Include="Assets\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ActiproSoftware.Controls.Avalonia" Version="25.1.0" />
+        <PackageReference Include="ActiproSoftware.Controls.Avalonia.Themes.DataGrid" Version="25.1.0" />
+        <PackageReference Include="Avalonia" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="NJsonSchema" Version="11.1.0" />
+        
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1">
+            <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+            <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="KeymapsData\Rider\keymaps-rider-macos.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="KeymapsData\Rider\keymaps-rider-resharper-macos.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="KeymapsData\Keymaps Cards\keymaps-cards-macos.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>

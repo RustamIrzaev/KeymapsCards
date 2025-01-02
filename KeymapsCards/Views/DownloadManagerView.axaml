@@ -1,0 +1,57 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:KeymapsCards.ViewModels"
+             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="KeymapsCards.Views.DownloadManagerView"
+             x:DataType="vm:DownloadManagerViewModel">
+    
+    <Design.DataContext>
+        <vm:DownloadManagerViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Grid DockPanel.Dock="Bottom" ColumnDefinitions="*,Auto" Margin="20,0,20,15">
+            <actipro:HyperlinkTextBlock 
+                Text="Download keymaps from GitHub"
+                VerticalAlignment="Center"
+                Command="{Binding OpenKeymapsGitHub}"
+                FontSize="11"
+                FontWeight="Light" />
+            <Button Content="Back" 
+                    Width="100" 
+                    Classes="theme-soft"
+                    Command="{Binding GoBack}"
+                    HorizontalContentAlignment="Center"
+                    HorizontalAlignment="Center"/>
+        </Grid>
+        
+        <DataGrid DockPanel.Dock="Top"
+                  Margin="20" 
+                  ItemsSource="{Binding AvailableKeymaps}" 
+                  CanUserReorderColumns="True"
+                  CanUserSortColumns="True"
+                  AutoGenerateColumns="False" 
+                  CanUserResizeColumns="True"
+                  IsReadOnly="True" 
+                  GridLinesVisibility="All"
+                  VerticalAlignment="Stretch"
+                  HorizontalAlignment="Stretch"
+                  Classes="theme-scroll-overlay"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto"
+                  BorderThickness="1" 
+                  BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Installed?" Binding="{Binding IsInstalled}"/>
+                <DataGridTextColumn Header="Software" Binding="{Binding Software}" />
+                <DataGridTextColumn Header="Schema" Binding="{Binding KeymapSchema}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Author" Binding="{Binding Author}"/>
+                <DataGridTextColumn Header="Version" Binding="{Binding FileVersion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

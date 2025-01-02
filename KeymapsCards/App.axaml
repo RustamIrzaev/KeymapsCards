@@ -1,0 +1,30 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="KeymapsCards.App"
+             xmlns:actipro="http://schemas.actiprosoftware.com/avaloniaui"
+             xmlns:generation="clr-namespace:ActiproSoftware.UI.Avalonia.Themes.Generation;assembly=ActiproSoftware.Avalonia.Shared"
+             xmlns:local="clr-namespace:KeymapsCards"
+             RequestedThemeVariant="Dark"
+             Name="Keymaps Cards">
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <StyleInclude Source="avares://KeymapsCards/Styles/Icons.axaml"/>
+        
+        <actipro:ModernTheme Includes="NativeDataGrid" AreNativeControlThemesEnabled="True">
+            <actipro:ModernTheme.Definition>
+                <generation:ThemeDefinition UserInterfaceDensity="Normal" />
+            </actipro:ModernTheme.Definition>
+        </actipro:ModernTheme>
+    </Application.Styles>
+    
+    <NativeMenu.Menu>
+        <NativeMenu>
+            <NativeMenuItem Header="About Keymaps Cards" />
+            <NativeMenuItem Header="Check for Updates..." />
+        </NativeMenu>
+    </NativeMenu.Menu>
+</Application>

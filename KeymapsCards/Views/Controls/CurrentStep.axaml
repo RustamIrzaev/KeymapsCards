@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:KeymapsCards.Views.Controls"
+             x:Class="KeymapsCards.Views.Controls.CurrentStep">
+
+    <Grid Margin="10,10,10,0" ColumnDefinitions="*,*">
+        <Button Grid.Column="0"
+                Content="Abort"
+                Classes="theme-link warning"
+                FontSize="10"
+                Padding="0"
+                Command="{Binding Command, RelativeSource={RelativeSource AncestorType=controls:CurrentStep}}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center">
+            <Button.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Opacity" Value="0.3"/>
+                </Style>
+                <Style Selector="Button:pointerover">
+                    <Setter Property="Opacity" Value="0.8"/>
+                </Style>
+            </Button.Styles>
+        </Button>
+        
+        <TextBlock Grid.Column="1"
+                   Text="{Binding Message, RelativeSource={RelativeSource AncestorType=controls:CurrentStep}}" 
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   FontSize="12"
+                   Foreground="Gray"
+                   FontWeight="Light" />
+    </Grid>
+    
+</UserControl>
