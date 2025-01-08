@@ -6,7 +6,7 @@ Keymaps Cards provides engaging modes to enhance your productivity by learning e
 shortcuts.
 
 ---
-
+_(click on a link if video is missing)_
 ![video](https://github.com/user-attachments/assets/bc0983ec-ef15-4543-a241-702f60f5cdaf)
 
 ## Features
