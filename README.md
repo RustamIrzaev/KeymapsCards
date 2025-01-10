@@ -16,6 +16,7 @@ _(click on a link if video is missing)_
   * Classic Mode: test your knowledge by guessing the shortcut based on the action description
   * Timed Mode: a challenging variation of Classic Mode, where you must answer each question within a limited time
   * Guess by Description: select the correct shortcut from multiple options, based on the action’s description
+  * Guess by Keymap: select the correct description from multiple options, based on the provided keymap
   * <details>
      <summary>Screenshots</summary>
       <img src="https://github.com/user-attachments/assets/532ce743-ee36-4604-88e2-e514bb055a25" 
